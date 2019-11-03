@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2019/11/03/Maven/</loc>
-    
-    <lastmod>2019-11-03T09:40:36.768Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2019/10/30/My-First-Blog/</loc>
     
-    <lastmod>2019-11-03T08:34:36.143Z</lastmod>
+    <lastmod>2019-11-03T13:37:36.893Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/10/29/hello-world/</loc>
     
-    <lastmod>2019-11-03T06:39:53.942Z</lastmod>
+    <lastmod>2019-11-03T13:37:13.733Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/11/03/Maven/</loc>
+    
+    <lastmod>2019-11-03T13:36:18.341Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/11/03/Spring-AOP/</loc>
+    
+    <lastmod>2019-11-03T13:23:10.522Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/11/03/Spring-IOC/</loc>
+    
+    <lastmod>2019-11-03T13:22:59.713Z</lastmod>
     
   </url>
   
