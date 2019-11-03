@@ -72,8 +72,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -263,7 +261,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/30/My-First-Blog/">My First Blog</a>
+      <a class="article-title" href="/2019/10/30/My-First-Blog/">基于Hexo的博客搭建</a>
     </h1>
   
 
@@ -277,7 +275,121 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Mission"><a href="#Mission" class="headerlink" title="Mission"></a>Mission</h2><p>纵有疾风起，人生不厌弃</p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>  Hexo 是一个快速、简洁且高效的博客框架。<br>  Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li>安装前提 Node.js、Git</li>
+<li><code>$ npm install -g hexo -cli</code> 全局安装hexo</li>
+</ul>
+<h3 id="建立第一个Hexo博客"><a href="#建立第一个Hexo博客" class="headerlink" title="建立第一个Hexo博客"></a>建立第一个Hexo博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt; </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [floder] #新建一个网站</span><br><span class="line">$ hexo new [layout] &lt;title&gt; #新建一个文章 </span><br><span class="line">$ hexo new page --path &lt;path&gt; </span><br><span class="line">$ hexo clean #清除博客缓存 </span><br><span class="line">$ hexo g #generator装载成html文件 </span><br><span class="line">$ hexo s #serve开启服务 </span><br><span class="line">$ hexo d #deployer 部署到服务器</span><br></pre></td></tr></table></figure>
+
+<h3 id="撰写文章基本markdown语法"><a href="#撰写文章基本markdown语法" class="headerlink" title="撰写文章基本markdown语法"></a>撰写文章基本markdown语法</h3><p><strong>hexo所使用书写语法</strong>  </p>
+<p>  hexo中的书写语法和基本的markdown有不同的地方<br>  hexo框架采用的是markdown（GFM）的语法  </p>
+<p><strong>语法简明概述</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">效果</th>
+<th align="center">语法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">分段</td>
+<td align="center"><code>两个空格</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">换行</td>
+<td align="center"><code>两个空格+回车</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">标题</td>
+<td align="center"><code>#</code>~<code>######</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">加粗</td>
+<td align="center"><code>**文字**</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">斜体</td>
+<td align="center"><code>__文字__</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">引用</td>
+<td align="center"><code>&gt;</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">表格</td>
+<td align="center"><code>-</code> 和 `</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">图片</td>
+<td align="center"><code>！[说明](图片地址)</code></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">链接</td>
+<td align="center"><code>[说明](链接地址)</code></td>
+</tr>
+</tbody></table>
+<p><strong>使用例子</strong></p>
+<ul>
+<li><p>列表  </p>
+<ul>
+<li>代码  <pre><code class="bash">| 序号  | 物品名称 | 单价 |
+| :---: | :------- | :---- |
+| 1     | iphone X | 699$  |
+| 2     | Huawei Mate X | 599$  |</code></pre>
+</li>
+<li>效果  <table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">物品名称</th>
+<th align="left">单价</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">iphone X</td>
+<td align="left">699$</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Huawei Mate X</td>
+<td align="left">599$</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>链接  </p>
+<ul>
+<li>代码<br><code>[百度](www.baidu.com) || [Google](www.google.com)</code>  </li>
+<li>效果<br>  <a href="http://www.baidu.com" target="_blank" rel="noopener">百度</a><br>  <a href="http://www.google.com" target="_blank" rel="noopener">Google</a>  </li>
+</ul>
+</li>
+<li><p>图片</p>
+<ul>
+<li>代码<br><code>![头像](/img/touxiang.png) || ![网站图标](/img/favicon.png)</code></li>
+<li>效果<ul>
+<li>头像<br><img src="/img/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/James1.png" alt="头像"></li>
+<li>网站图标<br><img src="/img/favicon.png" alt="网站图标"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -291,11 +403,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Diary</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yalia</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Life</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
@@ -307,7 +419,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
+        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
@@ -412,8 +524,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -425,15 +535,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -454,11 +562,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Diary</a>
+                <a href="javascript:void(0)" class="js-tag color1">yalia</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Life</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
@@ -504,38 +612,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
