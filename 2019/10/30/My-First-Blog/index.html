@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;James1.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;favicon.png">
-<meta property="og:updated_time" content="2019-11-03T06:35:43.876Z">
+<meta property="og:updated_time" content="2019-11-03T08:34:36.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;James1.png">
   
@@ -255,7 +255,7 @@
 <tr>
 <td align="center">7</td>
 <td align="center">表格</td>
-<td align="center"><code>-</code> 和 `</td>
+<td align="center"><code>-</code> 和  <code>|</code> 分割行和列</td>
 </tr>
 <tr>
 <td align="center">8</td>
@@ -272,11 +272,7 @@
 <ul>
 <li><p>列表  </p>
 <ul>
-<li>代码  <pre><code class="bash">| 序号  | 物品名称 | 单价 |
-| :---: | :------- | :---- |
-| 1     | iphone X | 699$  |
-| 2     | Huawei Mate X | 599$  |</code></pre>
-</li>
+<li>代码  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 序号  | 物品名称 | 单价 |</span><br><span class="line">| :---: | :------- | :---- |</span><br><span class="line">| 1     | iphone X | 699$  |</span><br><span class="line">| 2     | Huawei Mate X | 599$  |</span><br></pre></td></tr></table></figure></li>
 <li>效果  <table>
 <thead>
 <tr>
@@ -301,18 +297,14 @@
 </li>
 <li><p>链接  </p>
 <ul>
-<li>代码<br><code>[百度](www.baidu.com) || [Google](www.google.com)</code>  </li>
+<li>代码  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[百度](www.baidu.com)</span><br><span class="line">[Google](www.google.com)</span><br></pre></td></tr></table></figure></li>
 <li>效果<br>  <a href="http://www.baidu.com" target="_blank" rel="noopener">百度</a><br>  <a href="http://www.google.com" target="_blank" rel="noopener">Google</a>  </li>
 </ul>
 </li>
 <li><p>图片</p>
 <ul>
-<li>代码<br><code>![头像](/img/touxiang.png) || ![网站图标](/img/favicon.png)</code></li>
-<li>效果<ul>
-<li>头像<br><img src="/img/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/James1.png" alt="头像"></li>
-<li>网站图标<br><img src="/img/favicon.png" alt="网站图标"></li>
-</ul>
-</li>
+<li>代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![头像](/img/touxiang.png)</span><br><span class="line">![网站图标](/img/favicon.png)</span><br></pre></td></tr></table></figure></li>
+<li>效果<br>头像<br><img src="/img/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/James1.png" alt="头像"><br>网站图标<br><img src="/img/favicon.png" alt="网站图标"></li>
 </ul>
 </li>
 </ul>
@@ -413,6 +405,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/11/03/Maven/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Maven
+        
+      </div>
+    </a>
   
   
     <a href="/2019/10/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -551,6 +552,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yalia</a>
