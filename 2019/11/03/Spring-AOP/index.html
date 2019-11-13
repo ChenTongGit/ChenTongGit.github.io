@@ -8,16 +8,18 @@
   <link rel="dns-prefetch" href="http://chentonggit.github.io">
   <title>Spring AOP | It‘s CT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本概念">
+  <meta name="description" content="Spring AOP 理论基本概念Apsect Oriented Programming 面向切面编程，通过预编译方行期间动态代理是实现程序功能的统一维护的一种技术对象与对象之间、方法于方法之间、模块于模块之间都可以是一个切面AOP中的基本单元是Aspect（切面）">
 <meta name="keywords" content="Java,Spring,Spring AOP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring AOP">
 <meta property="og:url" content="http:&#x2F;&#x2F;chentonggit.github.io&#x2F;2019&#x2F;11&#x2F;03&#x2F;Spring-AOP&#x2F;index.html">
 <meta property="og:site_name" content="It‘s CT">
-<meta property="og:description" content="基本概念">
+<meta property="og:description" content="Spring AOP 理论基本概念Apsect Oriented Programming 面向切面编程，通过预编译方行期间动态代理是实现程序功能的统一维护的一种技术对象与对象之间、方法于方法之间、模块于模块之间都可以是一个切面AOP中的基本单元是Aspect（切面）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-04T02:51:01.077Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;WarframePrimer&#x2F;mysmart4j&#x2F;master&#x2F;img&#x2F;AOP.jpg">
+<meta property="og:updated_time" content="2019-11-13T10:28:56.578Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;WarframePrimer&#x2F;mysmart4j&#x2F;master&#x2F;img&#x2F;AOP.jpg">
   
     <link rel="alternative" href="/atom.xml" title="It‘s CT" type="application/atom+xml">
   
@@ -198,7 +200,98 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3>
+        <h3 id="Spring-AOP-理论"><a href="#Spring-AOP-理论" class="headerlink" title="Spring AOP 理论"></a>Spring AOP 理论</h3><p><strong>基本概念</strong><br>Apsect Oriented Programming 面向切面编程，通过预编译方行期间动态代理是实现程序功能的统一维护的一种技术<br>对象与对象之间、方法于方法之间、模块于模块之间都可以是一个切面<br>AOP中的基本单元是Aspect（切面）  </p>
+<a id="more"></a>    
+<p><strong><a href="https://raw.githubusercontent.com/WarframePrimer/mysmart4j/master/img/AOP.jpg" target="_blank" rel="noopener">概念导图</a></strong><br><img src="https://raw.githubusercontent.com/WarframePrimer/mysmart4j/master/img/AOP.jpg" alt="AOP概念导图"></p>
+<p><strong>术语</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apsect</td>
+<td align="left">切面 pointcut和advice组成，包含了横切逻辑的定义，也包含了连接点的定义</td>
+</tr>
+<tr>
+<td align="left">Advice</td>
+<td align="left">增强 由aspect添加到特定的join point的一段代码，很多aop框架会将advice模拟为一个拦截期（interceptor），并且载join point上维护多个advice进行层层拦截</td>
+</tr>
+<tr>
+<td align="left">Join Point</td>
+<td align="left">连接点 程序中的一些时间点，例如一个方法的执行，或者异常的处理。在Spring AOP中，jion point总是方法的执行点，即只有方法的连接点</td>
+</tr>
+<tr>
+<td align="left">Point Cut</td>
+<td align="left">切点 匹配join point的谓词，advice是和特定的point cut关联的，并且在point cut相匹配的join point中执行</td>
+</tr>
+<tr>
+<td align="left">Introduction</td>
+<td align="left">说明 为了一个类型添加额外的方法或字段SpringAOP允许我们为目标对象引入新的接口和对应的实现</td>
+</tr>
+<tr>
+<td align="left">Target</td>
+<td align="left">目标对象 织入advice的目标对象 目标对象也被称为advice object（植入advice后所产生的代理类）</td>
+</tr>
+<tr>
+<td align="left">AOP proxy</td>
+<td align="left">AOP代理 一个类被AOP织入advice，就会产生一个结果类，他是融合了原类和增强逻辑的代理类，在Spring AOP中一个代理是一个JDK动态代理对象或CGLIB代理对象</td>
+</tr>
+<tr>
+<td align="left">Weaving</td>
+<td align="left">织入 将aspect和其他对象连接起来，并创建<strong>adviced object</strong>的过程，三种织入方法 编辑器织入、类装载期织入、动态代理织入</td>
+</tr>
+</tbody></table>
+<p><strong>Advice 类型</strong>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">before advice</td>
+<td align="left">在join point前被执行的advice，但它不能阻止join point的执行，除非发生了异常</td>
+</tr>
+<tr>
+<td align="left">after return advice</td>
+<td align="left">在一个join point正常返回后执行的advice</td>
+</tr>
+<tr>
+<td align="left">after throwing advice</td>
+<td align="left">在一个join point抛出异常后执行的advice</td>
+</tr>
+<tr>
+<td align="left">after（final） advice</td>
+<td align="left">无论一个join point是正常退出还是发生了异常，都会被执行的advice</td>
+</tr>
+<tr>
+<td align="left">around advice</td>
+<td align="left">在join point前和join point退出后都执行的advice 这个是最常用的advice</td>
+</tr>
+</tbody></table>
+<p><strong>主要功能</strong><br>日志记录、性能测试、安全控制、事务处理、异常处理等  </p>
+<p><strong>实现方式</strong><br>预编译：AspectJ 运行期动态代理（JDK动态代理、CGLib动态代理）SpringAOP、JbossAOP  </p>
+<h3 id="AOP的是实现"><a href="#AOP的是实现" class="headerlink" title="AOP的是实现"></a>AOP的是实现</h3><p>两种方式： Spring AOP || AspectJ</p>
+<h3 id="AspectJ支持"><a href="#AspectJ支持" class="headerlink" title="@AspectJ支持"></a>@AspectJ支持</h3><p><strong>概念</strong><br>@AspectJ 是一种使用Java注解来实现AOP的编码风格<br>@AspectJ 分隔的AOP是AspectJ Project在AspectJ 5中引入的，并且Spring也支持@AspectJ的风格  </p>
+<p><strong>使能AspectJ</strong>  </p>
+<ul>
+<li>Java Configuration的方式  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>  </span><br><span class="line"><span class="meta">@EnableAspectJAutoProxy</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppConfig</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>XML的方式  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p><strong>定义Aspect</strong><br>当使用注解 @Aspect 标注一个 Bean 后, 那么 Spring 框架会自动收集这些 Bean, 并添加到 Spring AOP 中，只由Aspect注解并不能将一个Java对象转换为Bean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyTest</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//不能是其他切面的**adviced object了</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>参考</strong><br><a href="https://blog.csdn.net/q982151756/article/details/80513340" target="_blank" rel="noopener">有趣的AOP解释</a></p>
+
       
 
       
@@ -435,19 +528,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yalia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yalia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

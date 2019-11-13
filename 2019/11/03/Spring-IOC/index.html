@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;chentonggit.github.io&#x2F;img&#x2F;SpringIoc&#x2F;ioc%E8%A7%A3%E8%80%A6.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;chentonggit.github.io&#x2F;img&#x2F;SpringIoc&#x2F;%E6%97%A0Ioc%E7%B3%BB%E7%BB%9F.png">
-<meta property="og:updated_time" content="2019-11-08T01:08:18.411Z">
+<meta property="og:updated_time" content="2019-11-08T01:40:34.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;chentonggit.github.io&#x2F;img&#x2F;SpringIoc&#x2F;ioc%E8%A7%A3%E8%80%A6.png">
   
@@ -207,8 +207,18 @@
 <h3 id="Spring-Ioc原理"><a href="#Spring-Ioc原理" class="headerlink" title="Spring Ioc原理"></a>Spring Ioc原理</h3><p><strong>目的</strong><br>解决对象之间的耦合度过高的问题  </p>
 <p><strong>基本概念</strong><br>Inversion of Control 控制反转 借助于“第三方”实现具有依 赖关系的对象之间的解耦<br><img src="/img/SpringIoc/ioc%E8%A7%A3%E8%80%A6.png" alt="Ioc解耦过程"><br><img src="/img/SpringIoc/%E6%97%A0Ioc%E7%B3%BB%E7%BB%9F.png" alt="无Ioc系统">  </p>
 <p>软件系统在没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。<br>软件系统在引入IOC容器之后，这种情形就完全改变了，如图3所示，由于IOC容器的加入，对象A与对象B之间失去了直接联系，所以，当对象A运行到需要对象B的时候，IOC容器会主动创建一个对象B注入到对象A需要的地方。通过前后的对比，我们不难看出来：对象A获得依赖对象B的过程,由主动行为变为了被动行为，控制权颠倒过来了，这就是“控制反转”这个名称的由来</p>
-<p><strong>依赖注入</strong><br>所谓依赖注入，就是由IOC容器在运行期间，动态地将某种依赖关系注入到对象之中。<br>依赖注入(DI)和控制反转(IOC)是从不同的角度的描述的同一件事情，就是指通过引入IOC容器，利用依赖关系注入的方式，实现对象之间的解耦。</p>
-<h3 id="Spring的Bean配置——XML"><a href="#Spring的Bean配置——XML" class="headerlink" title="Spring的Bean配置——XML"></a>Spring的Bean配置——XML</h3>
+<p><strong>依赖注入 DI</strong><br>所谓依赖注入，就是由IOC容器在运行期间，动态地将某种依赖关系注入到对象之中。<br>依赖注入(DI)和控制反转(IOC)是从不同的角度的描述的同一件事情，就是指通过引入IOC容器，利用依赖关系注入的方式，实现对象之间的解耦。  </p>
+<p><strong>Ioc的优点</strong></p>
+<ol>
+<li>低耦合</li>
+<li>复杂开发只需遵循接口标准，具体组件实现可以不关心</li>
+<li>可复用性高</li>
+<li>具有热插拔特性</li>
+</ol>
+<p><strong>Ioc生成对象的技术：反射</strong><br>效率比较低(反射机制比较慢)</p>
+<h3 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h3><p>在面向对象的开发过程中，一些类之间存在着依赖的关系，一个类的使用可能需要依赖其他的类，在没有IOC的情况，通常如果使用一个类A，但它依赖于类B，那么使用类A之前需要我们主动的去创建一个类B满足他们之间的依赖关系，这样控制权主要在我们的手上，需要时自己创建；而在IOC的帮助下，如果在使用A类，我们不需要自己创建A所需要依赖的类，IOC会为我们提供A所需要的依赖类，这样就可以很好的降低耦合度</p>
+<p><strong>参考</strong><br><a href="https://blog.csdn.net/m13666368773/article/details/7802126" target="_blank" rel="noopener">Spring的IOC原理[通俗解释一下]</a></p>
+
       
 
       
@@ -454,19 +464,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yalia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yalia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
