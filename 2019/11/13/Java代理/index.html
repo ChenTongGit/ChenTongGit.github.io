@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chentonggit.github.io">
-  <title>It‘s CT</title>
+  <title>Java代理 | It‘s CT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术博客">
-<meta name="keywords" content="java,Spring,JVM">
-<meta property="og:type" content="website">
-<meta property="og:title" content="It‘s CT">
-<meta property="og:url" content="http:&#x2F;&#x2F;chentonggit.github.io&#x2F;index.html">
+  <meta name="description" content="理论基本概念代理模式（Proxy）是通过代理对象访问目标对象，这样可以在目标对象基础上增强额外的功能，如添加权限，访问控制和审计等功能。代理模式时常用的Java设计模式，代理类和委托类有着相同的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发为委托类，以及事后处理消息两者之间存在关联关系，代理对象不需要真正实现业务而是调用委托类的对象的相关方法提供特定服务">
+<meta name="keywords" content="Java,Java代理,Java基础知识,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代理">
+<meta property="og:url" content="http:&#x2F;&#x2F;chentonggit.github.io&#x2F;2019&#x2F;11&#x2F;13&#x2F;Java%E4%BB%A3%E7%90%86&#x2F;index.html">
 <meta property="og:site_name" content="It‘s CT">
-<meta property="og:description" content="个人技术博客">
+<meta property="og:description" content="理论基本概念代理模式（Proxy）是通过代理对象访问目标对象，这样可以在目标对象基础上增强额外的功能，如添加权限，访问控制和审计等功能。代理模式时常用的Java设计模式，代理类和委托类有着相同的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发为委托类，以及事后处理消息两者之间存在关联关系，代理对象不需要真正实现业务而是调用委托类的对象的相关方法提供特定服务">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-14T03:36:42.516Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="It‘s CT" type="application/atom+xml">
@@ -171,204 +172,24 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Builde-Hexo-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java代理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/30/Builde-Hexo-Blog/">基于Hexo的博客搭建</a>
+    <h1 class="article-title" itemprop="name">
+      Java代理
     </h1>
   
 
         
         
-<a href="/2019/10/30/Builde-Hexo-Blog/" class="archive-article-date">
-  	<time datetime="2019-10-30T03:13:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>  Hexo 是一个快速、简洁且高效的博客框架。<br>  Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-        
-          <a class="article-more-a" href="/2019/10/30/Builde-Hexo-Blog/#more">more >></a>
-        
-      
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yalia</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/30/Builde-Hexo-Blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/03/Maven/">Maven</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/11/03/Maven/" class="archive-article-date">
-  	<time datetime="2019-11-03T06:45:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>  Maven是一个Apache软件基金会维护的自动化构建工具，专注服务于java的项目构建以及依赖管理。  </p>
-        
-          <a class="article-more-a" href="/2019/11/03/Maven/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/03/Maven/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java代理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/Java%E4%BB%A3%E7%90%86/">Java代理</a>
-    </h1>
-  
-
-        
-        
 <a href="/2019/11/13/Java%E4%BB%A3%E7%90%86/" class="archive-article-date">
   	<time datetime="2019-11-13T10:47:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
@@ -378,9 +199,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h3><p><strong>基本概念</strong><br>代理模式（Proxy）是通过代理对象访问目标对象，这样可以在目标对象基础上增强额外的功能，如添加权限，访问控制和审计等功能。<br>代理模式时常用的Java设计模式，代理类和委托类有着相同的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发为委托类，以及事后处理消息<br>两者之间存在关联关系，代理对象不需要真正实现业务而是调用委托类的对象的相关方法提供特定服务  </p>
-        
-          <a class="article-more-a" href="/2019/11/13/Java%E4%BB%A3%E7%90%86/#more">more >></a>
-        
+<a id="more"></a>  
+<p><strong>图解</strong><br><a href="https://upload-images.jianshu.io/upload_images/3796264-685fe5f322014df8.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/783/format/webp" target="_blank" rel="noopener">代理模式结构图</a>  </p>
+<p><strong>代理类型</strong></p>
+<ul>
+<li>静态代理<br>  由程序员创建或特定工具自动生成源代码，也就是在<strong>编译时就已经将接口，被代理类，代理类等确定下来</strong>。在程序运行之前，代理类的.class文件就已经生成</li>
+<li>动态代理<br>  代理类在<strong>程序运行时创建</strong>的代理方式被成为动态代理,经典例子 SpringAOP 的实现  </li>
+</ul>
+<p><strong>静态代理实现</strong>  </p>
+<ul>
+<li><p>定义接口类AdminService  </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Interface AdminService&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function">Object <span class="title">find</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义实现类AdminServiceImpl（委托类）</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AdminServiceImpl</span> <span class="keyword">implements</span> <span class="title">AdminService</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">update</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"更新信息"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">find</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"获取信息"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义代理类AdminServiceProxy  </p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AdminServiceProxy</span> <span class="keyword">implements</span> <span class="title">AdminService</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> AdminService adminService;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AdminServiceProxy</span><span class="params">(AdminService adminService)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.adminService = adminService;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">update</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"判断用户权限"</span>);</span><br><span class="line">		adminService.update();</span><br><span class="line">		System.out.println(<span class="string">"记录用户update操作"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">find</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"判断用户权限"</span>);</span><br><span class="line">		System.out.println(<span class="string">"记录用户update操作"</span>);</span><br><span class="line">		<span class="keyword">return</span> adminService.find();</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Test  </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static main(String[] args)&#123;</span><br><span class="line">		AdminService adminService = new AdminServiceImpl();</span><br><span class="line">		AdminServiceProxy proxy = new AdminServiceProxy(adminService);</span><br><span class="line">		proxy.update();</span><br><span class="line">		proxy.find();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
 
       
@@ -425,16 +265,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/13/Java%E4%BB%A3%E7%90%86/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://chentonggit.github.io/2019/11/13/Java%E4%BB%A3%E7%90%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/03/Spring-AOP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring AOP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -454,280 +353,14 @@
 
 
 
-
   
-    <article id="post-Spring-AOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/03/Spring-AOP/">Spring AOP</a>
-    </h1>
   
 
-        
-        
-<a href="/2019/11/03/Spring-AOP/" class="archive-article-date">
-  	<time datetime="2019-11-03T13:18:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Spring-AOP-理论"><a href="#Spring-AOP-理论" class="headerlink" title="Spring AOP 理论"></a>Spring AOP 理论</h3><p><strong>基本概念</strong><br>Apsect Oriented Programming 面向切面编程，通过预编译方行期间动态代理是实现程序功能的统一维护的一种技术<br>对象与对象之间、方法于方法之间、模块于模块之间都可以是一个切面<br>AOP中的基本单元是Aspect（切面）  </p>
-        
-          <a class="article-more-a" href="/2019/11/03/Spring-AOP/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/03/Spring-AOP/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring-IOC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/03/Spring-IOC/">Spring IoC</a>
-    </h1>
   
 
-        
-        
-<a href="/2019/11/03/Spring-IOC/" class="archive-article-date">
-  	<time datetime="2019-11-03T12:59:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>Inversion of Control 控制反转 不需要关注依赖对象的创建，而是依赖对象的使用</p>
-        
-          <a class="article-more-a" href="/2019/11/03/Spring-IOC/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/03/Spring-IOC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/hello-world/">Hexo -- Hello World</a>
-    </h1>
   
 
-        
-        
-<a href="/2019/10/29/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-29T14:07:23.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        
-          <a class="article-more-a" href="/2019/10/29/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -765,8 +398,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
